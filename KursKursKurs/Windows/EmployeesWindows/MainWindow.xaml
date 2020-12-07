@@ -1,0 +1,23 @@
+﻿<Window x:Class="KursKursKurs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursKursKurs"
+        mc:Ignorable="d"
+        Title="MainWindow" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel>
+            <ContentControl x:Name="MyMenu" DockPanel.Dock="Top"/>
+            <Button x:Name="AddEmployee_Button" DockPanel.Dock="Bottom" Margin="10,0,10,10" Padding="0,20,0,20" Command="{Binding AddNewEmployeeCommand}" Content="Add New Employee"/>
+            <DataGrid ItemsSource="{Binding Employees}" Margin="5" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}"/>
+                    <DataGridTextColumn Header="Position" Binding="{Binding Path=Position.Name}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </DockPanel>
+        
+    </Grid>
+</Window>

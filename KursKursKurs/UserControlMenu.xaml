@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="KursKursKurs.UserControlMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KursKursKurs"
+             mc:Ignorable="d">
+    <Grid>
+        <Menu DockPanel.Dock="Top" Margin="5">
+            <MenuItem Header="Работники" Command="{Binding OpenEmployeesWindowCommand}"/>
+            <MenuItem Header="Акты">
+                <MenuItem Header="Акты о передаче товаров в ремонт" Command="{Binding OpenRenovationAcceptanceCertificatesWindowWindowCommand}"/>
+                <MenuItem Header="Акты о возврате товаров из ремонта" Command="{Binding OpenRepairCertificatesWindowCommand}"/>
+                <MenuItem Header="Акты о здаче товаров в утиль" Command="{Binding OpenScrappingCertificateWindowCommand}"/>
+            </MenuItem>
+            <MenuItem Header="Отчёты">
+                <MenuItem Header="Отчёты о утилизированных товарах" Command="{Binding OpenJunkTransferReportWindowCommand}"/>
+                <MenuItem Header="Отчёты о переданных в ремонт товарах" Command="{Binding OpenRepairsTransferReportsWindowCommand}"/>
+                <MenuItem Header="Отчёт о вернувшихся из ремонта товарах" Command="{Binding OpenSertificatesCompletedReportsWindowCommand}"/>
+            </MenuItem>
+            <MenuItem Header="Оборудование" Command="{Binding OpenEquepmentWindowCommand}"/>
+        </Menu>
+    </Grid>
+</UserControl>

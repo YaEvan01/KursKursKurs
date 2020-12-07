@@ -1,0 +1,30 @@
+﻿<Window x:Class="KursKursKurs.AddNewScrappingCertificate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursKursKurs"
+        mc:Ignorable="d"
+        Title="AddScrappingCertificate" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
+    <DockPanel Margin="10">
+        <Grid DockPanel.Dock="Top" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Employee:" Grid.Row="0" Grid.Column="0"/>
+            <Button Background="White" Command="{Binding SelectEmployeeCommand}" Grid.Row="1" Grid.Column="0" Margin="5" Padding="5">
+                <TextBlock x:Name="Employee_TextBlock" Text="{Binding Employee.Name}" />
+            </Button>
+            <TextBlock Text="RepairCertificate:" Grid.Row="0" Grid.Column="1"/>
+            <Button Background="White" Command="{Binding SelectRepairSertificateCommand}" Grid.Row="1" Grid.Column="1" Margin="5" Padding="5">
+                <TextBlock x:Name="Equipment_TextBlock" Text="{Binding RepairCertificate.Id}" />
+            </Button>
+        </Grid>
+        <Button x:Name="Add_Button" DockPanel.Dock="Bottom" Padding="5" Command="{Binding AddScrappingCertificateCommand}" Content="Add New Certificate"/>
+    </DockPanel>
+</Window>

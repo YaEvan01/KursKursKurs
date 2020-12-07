@@ -1,0 +1,33 @@
+﻿<Window x:Class="KursKursKurs.AddNewRenovationAcceptanceCertificate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursKursKurs"
+        mc:Ignorable="d"
+        Title="AddNewRenovatioAcceptanceCertificate" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
+    <DockPanel Margin="10">
+        <Grid DockPanel.Dock="Top" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Employee:" Grid.Row="0" Grid.Column="0"/>
+            <Button Background="White" Command="{Binding SelectEmployeeCommand}" Grid.Row="1" Grid.Column="0" Margin="5" Padding="5">
+                <TextBlock x:Name="Employee_TextBlock" Text="{Binding Employee.Name}" />
+            </Button>
+            <TextBlock Text="Equipment:" Grid.Row="0" Grid.Column="1"/>
+            <Button Background="White" Command="{Binding SelectEquipmentCommand}" Grid.Row="1" Grid.Column="1" Margin="5" Padding="5">
+                <TextBlock x:Name="Equipment_TextBlock" Text="{Binding Equipment.Name}" />
+            </Button>
+            <TextBlock Text="Comment:" Grid.Row="0" Grid.Column="2"/>
+            <TextBox x:Name="Comment_TextBox" Text="{Binding Comment}" Grid.Row="1" Grid.Column="2" Margin="5" Padding="5"/>
+        </Grid>
+        <Button x:Name="Add_Button" DockPanel.Dock="Bottom" Padding="5" Command="{Binding AddNewRenovationAcceptanceCertificateCommand}" Content="Add New Employee"/>
+    </DockPanel>
+</Window>

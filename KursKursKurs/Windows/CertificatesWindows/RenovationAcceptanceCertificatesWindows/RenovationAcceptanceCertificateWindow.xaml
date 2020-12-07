@@ -1,0 +1,24 @@
+﻿<Window x:Class="KursKursKurs.RenovationAcceptanceCertificateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursKursKurs"
+        mc:Ignorable="d"
+        Title="RenovationAcceptanceCertificateWindow" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel>
+            <ContentControl x:Name="MyMenu" DockPanel.Dock="Top"/>
+            <Button x:Name="AddCertificate_Button" DockPanel.Dock="Bottom" Margin="10,0,10,10" Padding="0,20,0,20" Command="{Binding AddNewCertificateCommand}" Content="Add New Certificate"/>
+            <DataGrid ItemsSource="{Binding RenovationAcceptanceCertificates}" Margin="5" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
+                    <DataGridTextColumn Header="DateOfPreparation" Binding="{Binding Path=DateOfPreparation}"/>
+                    <DataGridTextColumn Header="Employee" Binding="{Binding Path=Employee.Name}"/>
+                    <DataGridTextColumn Header="Equipment" Binding="{Binding Path=Equipment.Name}"/>
+                    <DataGridTextColumn Header="Comment" Binding="{Binding Path=Comment}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </DockPanel>
+    </Grid>
+</Window>

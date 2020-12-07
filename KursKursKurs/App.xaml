@@ -1,0 +1,9 @@
+﻿<Application x:Class="KursKursKurs.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:KursKursKurs"
+             StartupUri="Windows/EmployeesWindows/MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

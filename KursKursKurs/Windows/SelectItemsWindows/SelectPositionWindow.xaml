@@ -1,0 +1,20 @@
+﻿<Window x:Class="KursKursKurs.SelectPositionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KursKursKurs"
+        mc:Ignorable="d"
+        Title="SelectPositionWindow" WindowStartupLocation="CenterScreen" Width="200" SizeToContent="WidthAndHeight" >
+    <DockPanel>
+        <DataGrid x:Name="positions"  DockPanel.Dock="Top" ItemsSource="{Binding Positions}" SelectedItem="{Binding SelectedPosition}" Margin="5" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Path=Id}"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid DockPanel.Dock="Bottom">
+            <Button DockPanel.Dock="Bottom" Command="{Binding CloseCommand}" Margin="10,10,10,10" Content="Select"/>
+        </Grid>
+    </DockPanel>
+</Window>
